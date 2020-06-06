@@ -6,9 +6,10 @@
   "scripts": {
     "start": "nodemon server.js"
   },
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "express": "^4.17.1",
     "nodemon": "^2.0.4",
     "nunjucks": "^3.2.1"
-  },
-  "dependencies": {}
+  }
 }
