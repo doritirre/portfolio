@@ -13,97 +13,20 @@
     </div>   
 
     <section class="cards">
-
-        <div class="card" id="Vw9BG9fauIE">
+        {% for item in items %}
+        <div class="card" id="{{item.id}}">
             <div class="card_image_container">
-                <img src="https://img.youtube.com/vi/Vw9BG9fauIE/maxresdefault.jpg" alt="Video aula">
+                <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{ item.title }}">
             </div>
             <div class="card_content">
-                <p>É hora de estudar o Deno?</p>
+                <p>{{item.title}}</p>
             </div>
             <div class="card_info">
-                <p>57 min</p>
-                <p class="card_price">Free</p>
+                <p>{{item.duration}}</p>
+                <p class="card_price">{{item.price}}</p>
             </div>
         </div>
-
-        <div class="card" id="U0wQjppkFdY">
-            <div class="card_image_container">
-                <img src="https://img.youtube.com/vi/U0wQjppkFdY/maxresdefault.jpg" alt="Video aula">
-            </div>
-            <div class="card_content">
-                <p>É hora de estudar o Deno?</p>
-            </div>
-            <div class="card_info">
-                <p>57 min</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
-
-        <div class="card" id="NLcXijzqP9M">
-            <div class="card_image_container">
-                <img src="https://img.youtube.com/vi/NLcXijzqP9M/maxresdefault.jpg" alt="Video aula">
-            </div>
-            <div class="card_content">
-                <p>É hora de estudar o Deno?</p>
-            </div>
-            <div class="card_info">
-                <p>57 min</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
-
-        <div class="card" id="6wn8hpUcEcM">
-            <div class="card_image_container">
-                <img src="https://img.youtube.com/vi/6wn8hpUcEcM/maxresdefault.jpg" alt="Video aula">
-            </div>
-            <div class="card_content">
-                <p>É hora de estudar o Deno?</p>
-            </div>
-            <div class="card_info">
-                <p>57 min</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
-
-        <div class="card" id="7HMlkIBRH60">
-            <div class="card_image_container">
-                <img src="https://img.youtube.com/vi/7HMlkIBRH60/maxresdefault.jpg" alt="Video aula">
-            </div>
-            <div class="card_content">
-                <p>É hora de estudar o Deno?</p>
-            </div>
-            <div class="card_info">
-                <p>57 min</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
-
-        <div class="card" id="5MP6hmdEvJo">
-            <div class="card_image_container">
-                <img src="https://img.youtube.com/vi/5MP6hmdEvJo/maxresdefault.jpg" alt="Video aula">
-            </div>
-            <div class="card_content">
-                <p>É hora de estudar o Deno?</p>
-            </div>
-            <div class="card_info">
-                <p>57 min</p>
-                <p class="card_price">Free</p>
-            </div>
-        </div>
-        
-    </section>
-
-    <div class="modal_overlay">
-        <div class="modal">
-            <a class="close_modal">
-                <img src="close.svg" alt="botao fechar">
-            </a>
-            <div class="modal_content">
-                <iframe src="" frameborder="0"></iframe>
-            </div>
-        </div>        
-    </div>
+        {% endfor %}
 
     <script src="scripts.js"></script>
 
