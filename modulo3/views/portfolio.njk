@@ -13,7 +13,9 @@
     </div>   
 
     <section class="cards">
+
         {% for item in items %}
+
         <div class="card" id="{{item.id}}">
             <div class="card_image_container {{ 'featured-wrapper' if item.featured }}">
                 <img src="https://img.youtube.com/vi/{{item.id}}/maxresdefault.jpg" alt="Imagem de {{ item.title }}">
@@ -29,8 +31,11 @@
                 <p class="card_price">{{item.price}}</p>
             </div>
         </div>
+
         {% endfor %}
 
-    <script src="scripts.js"></script>
+    </section>        
+
+    <script src="/scripts.js"></script>
 
 {% endblock %}    
